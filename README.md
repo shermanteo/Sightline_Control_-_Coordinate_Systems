@@ -19,9 +19,9 @@ A three-dimensional, earth-centered reference system in which locations are iden
 - North-East-Down (NED) Convention and East-North-Up (ENU) Convention:
 There are two main ways to display our coordinate systems mainly NED or ENU convention. This is especially important when working with different frames of references such as aircrafts, sea vehicles and land vehicles. Different scenarios will utilise different conventions depending on the platforms requirements and how the user wishes to use and display the information. 
 
-Coordinates to describe an aircraft attitude (Heading, Elevation and Bank) are normally given relative to a reference control frame located in a control tower, and therefore ENU, relative to the position of the control tower on the earth surface.
+  Coordinates to describe an aircraft attitude (Heading, Elevation and Bank) are       normally given relative to a reference control frame located in a control tower, and therefore ENU, relative to the position of the control tower on the earth surface.
 
-Coordinates to describe observations made from an aircraft are normally given relative to its intrinsic axes, but normally using as positive the coordinate pointing downwards, where the interesting points are located. Therefore, they are normally NED.
+  Coordinates to describe observations made from an aircraft are normally given relative to its intrinsic axes, but normally using as positive the coordinate pointing downwards, where the interesting points are located. Therefore, they are normally NED.
 
 
 # Geodetic Coordinate System to Geocentric Coordinate System
