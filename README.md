@@ -43,6 +43,7 @@ For the Geocentric Coordinate System, it uses a cartesian coordinate system henc
 ## Acknowledgment, Credits and Suggested Readings
 All the knowledge and concepts which were being used in this project should be credited to the authors of the sites, papers and books:
 
+https://apps.dtic.mil/sti/pdfs/ADA484864.pdf
 https://science-data.larc.nasa.gov/LITE/level1doc/geodetic_coords.html
 https://docs.oracle.com/cd/A91202_01/901_doc/appdev.901/a88805/sdo_cs_c.htm
 https://en.wikipedia.org/wiki/Axes_conventions
