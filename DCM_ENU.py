@@ -12,7 +12,7 @@ Altitude1 = float(input('Altitude of the target position:'))        # Altitude o
 
 Matrix_NED_1 = np.matrix ([[ 1, 0, 0],
                            [ 0, sin(Latitude1), cos(Latitude1)], 
-                           [ 0, -cos(Latitude1), cos(Latitude1)]])
+                           [ 0, -cos(Latitude1), sin(Latitude1)]])
 Matrix_NED_2 = np. matrix ([[ -sin(Longitude1), cos(Longitude1), 0],
                             [ -cos(Longitude1), -sin(Longitude1), 0],
                             [ 0, 0, 1]])
