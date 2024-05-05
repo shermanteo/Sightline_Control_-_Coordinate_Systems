@@ -1,6 +1,8 @@
 # Direction Cosine Matrix (DCM)
 # Rotation of the ECEF Coordinates to the Local Vertical Coordinates
 # The rotation matrix will be rotating the coordinates in North-East-Down (NED) Convention
+# X, Y, Z are the coordinates input in ECEF 
+# Output will be x, y, z which are the ECEF coordinates but in NED Convention
 
 import numpy as np
 from math import sin, cos
