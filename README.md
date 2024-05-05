@@ -47,3 +47,6 @@ https://apps.dtic.mil/sti/pdfs/ADA484864.pdf
 https://science-data.larc.nasa.gov/LITE/level1doc/geodetic_coords.html
 https://docs.oracle.com/cd/A91202_01/901_doc/appdev.901/a88805/sdo_cs_c.htm
 https://en.wikipedia.org/wiki/Axes_conventions
+https://www.suncam.com/miva/downloads/docs/360.pdf
+https://www.suncam.com/miva/downloads/docs/359.pdf
+https://www.suncam.com/miva/downloads/docs/358.pdf
