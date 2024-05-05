@@ -1,9 +1,21 @@
-# Sightline Control and Coordinate_Systems
-
+# Sightline Control and Coordinate Systems Transformations
+ 
 ## Project Overview
-There are several coordinate systems that are being used around the world which may confuse us at times. These coodrinate systems may be trivial to some however for others, it proves to be of utmost importance especially when it involves interpreting one coordinate system and how it applies to the other. For example, there are maps which give the Latitude, Longitude and Altitude however, it is not as intuitive when we need to calculate much smaller differences in displacements hence preferring to use X, Y and Z instead. There are a variety of different coordinate systems and each has their benefits and detriments however, this project will cover just the transformation of between coordinate systems and subsequently using all these knowledge to create a code for sightline control. 
+There are several coordinate systems that are being used around the world which may confuse us at times. These coordinate systems may be trivial to some however for others, it proves to be of utmost importance especially when it involves interpreting one coordinate system and how it applies to the other. For example, there are maps which give the Latitude, Longitude and Altitude however, it is not as intuitive when we need to calculate much smaller differences in displacements hence preferring to use X, Y and Z instead. There are a variety of different coordinate systems and each has their benefits and detriments however, this project will cover just the transformation of between coordinate systems and subsequently using all these knowledge to create a code for sightline control. 
 
 All constants used are in accordance to WGS84.
+
+# Brief Overview of Sightline Control
+Sightline control refers to the management and regulation of visual lines of sight within a given space, often in urban planning, architecture, or scenic conservation. It involves ensuring that specific views or vistas are protected, enhanced, or regulated to achieve desired aesthetic, functional, or regulatory goals.
+
+## Key aspects of sightline control include:
+- Protection of Views: Sightline control aims to safeguard significant or iconic views from obstruction or degradation. This can involve zoning regulations, design guidelines, or legal protections to preserve sightlines to landmarks, natural features, or cultural heritage sites.
+- Visual Impact Assessment: Before undertaking development projects, especially those in sensitive areas, sightline assessments may be conducted to evaluate potential visual impacts. This involves analyzing how proposed changes to the landscape or built environment might affect existing views and vistas.
+- Design Integration: In urban design and architecture, sightline control is often integrated into the design process to optimize visual connections and perspectives. Designers may strategically orient buildings, public spaces, or infrastructure to frame or enhance specific views, creating memorable experiences for inhabitants and visitors.
+- Vegetation Management: Vegetation, such as trees and shrubs, can significantly influence sightlines. Sightline control may involve vegetation management strategies to preserve or enhance views, such as selective pruning, strategic planting, or tree preservation ordinances.
+- Regulatory Tools: Municipalities may implement zoning ordinances, land use regulations, or design guidelines to enforce sightline control objectives. These regulations can stipulate building height limits, setbacks, view corridors, or other measures to protect or enhance important views.
+
+Overall, sightline control plays a vital role in shaping the visual character and quality of urban and natural landscapes, ensuring that views of significance are respected, maintained, or enhanced for the benefit of communities and the environment.
 
 # Brief Overview of Coordinate Systems
 ## Geodetic Coordinate System
