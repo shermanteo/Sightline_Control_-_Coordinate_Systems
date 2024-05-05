@@ -8,13 +8,17 @@ import numpy as np
 from math import sin, cos
 
 def ECEF_2_NED(X, Y, Z, Latitude, Longitude, Altitude):
-  ENU_Rotation_Matrix = np.matrix ([[ -sin(Longitude), cos(Longitude), 0],
-                                    [ -cos(Longitude)*sin(Latitude), -sin(Longitude)*sin(Latitude), cos(Latitude)], 
-                                    [ cos(Longitude)*cos(Latitude), sin(Longitude)*cos(Latitude), sin(Latitude)]])
+  Matrix_ENU_1 = np.matrix ([[ 1, 0, 0],
+                             [ 0, sin(Latitude), cos(Latitude)], 
+                             [ 0, -cos(Latitude), sin(Latitude)]])
+  Matrix_ENU_2 = np. matrix ([[ -sin(Longitude), cos(Longitude), 0],
+                              [ -cos(Longitude), -sin(Longitude), 0],
+                              [ 0, 0, 1]])
+  NED_Rotation_Matrix = Matrix_ENU_1 * Matrix_ENU_2
 
   Coordinates_ECEF = np.matrix ([[ X ],
-                            [ Y ], 
-                            [ Z ]])
+                                 [ Y ], 
+                                 [ Z ]])
 
   ENU_convention = ENU_Rotation_Matrix * Coordinates_ECEF
 
