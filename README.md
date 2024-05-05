@@ -1,43 +1,58 @@
-# Coordinate_Systems
+# Sightline Control and Coordinate_Systems
 
 ## Project Overview
 There are several coordinate systems that are being used around the world which may confuse us at times. These coodrinate systems may be trivial to some however for others, it proves to be of utmost importance especially when it involves interpreting one coordinate system and how it applies to the other. For example, there are maps which give the Latitude, Longitude and Altitude however, it is not as intuitive when we need to calculate much smaller differences in displacements hence preferring to use X, Y and Z instead. There are a variety of different coordinate systems and each has their benefits and detriments however, this project will cover just the transformation of between coordinate systems and subsequently using all these knowledge to create a code for sightline control. 
 
 All constants used are in accordance to WGS84.
 
-## Brief Overview of Coordinate Systems
-- Geodetic Coordinate System
+# Brief Overview of Coordinate Systems
+## Geodetic Coordinate System
+The geodetic coordinate system is a three-dimensional coordinate system used to specify the position of points on the surface of the Earth. It consists of latitude, longitude, and altitude (or elevation).
+
+Latitude measures how far north or south a point is from the Equator, ranging from 0° at the Equator to 90°N at the North Pole and 90°S at the South Pole. Longitude measures the east-west position of a point relative to the Prime Meridian, which runs through Greenwich, England, with values ranging from 0° to 180°E and 0° to 180°W. Altitude, also known as elevation, represents the height of a point above or below a reference surface, such as sea level.
+
+Together, latitude and longitude provide a way to pinpoint any location on Earth's surface, while altitude adds the third dimension, making it possible to specify the height of a point relative to a reference surface. This coordinate system is fundamental for various applications, including navigation, surveying, cartography, and GIS (Geographic Information Systems).
+
+## Geocentric Coordinate System/Earth-Centered, Earth-Fixed (ECEF) Coordinate System:
+The geocentric coordinate system is a three-dimensional coordinate system centered at the center of the Earth, also known as the geocenter. Unlike the geodetic coordinate system, which is based on the Earth's surface, the geocentric system treats the Earth as a perfect sphere or an ellipsoid and specifies positions relative to its center.
+
+In this system, three coordinates are used to describe a point: geocentric latitude, longitude, and radial distance. Geocentric latitude measures the angle between the equatorial plane and a line connecting the point to the Earth's center, ranging from 0° at the equator to 90° at the poles. Longitude measures the angle between a reference meridian and the meridian passing through the point, similar to the geodetic system. Radial distance represents the straight-line distance from the point to the Earth's center.
+
+The geocentric coordinate system is commonly used in astronomy, satellite tracking, and geodesy, where precise positioning relative to the Earth's center is required. It provides a consistent reference frame for global measurements and calculations, essential for activities such as satellite orbit determination, Earth rotation studies, and geophysical modeling.
 
 
+## Local Coordinate System: 
+The local coordinate system is a Cartesian coordinate system established within a defined local area, providing a frame of reference relative to a specific point or object of interest. Unlike global coordinate systems such as geodetic or geocentric systems, which cover the entire Earth, the local coordinate system is localized and typically used for smaller areas or projects.
 
-- Geocentric Coordinate System/Earth-Centered, Earth-Fixed (ECEF) Coordinate System:
-A three-dimensional, earth-centered reference system in which locations are identified by their x-, y-, and z-values. The x-axis is in the equatorial plane and intersects the prime meridian (usually Greenwich). The y-axis is also in the equatorial plane; it lies at right angles to the x-axis and intersects the 90-degree meridian. The z-axis coincides with the polar axis and is positive toward the north pole. The origin is located at the center of the sphere or spheroid.
+The local coordinate system typically has three orthogonal axes, often denoted as:
 
+X-axis: Usually aligned with a chosen direction within the local area, representing the east-west direction.
+Y-axis: Perpendicular to the X-axis, representing the north-south direction.
+Z-axis: Represents the vertical dimension, typically aligned with the local gravitational direction or a predefined vertical reference.
+The origin of the local coordinate system is usually set at a specific point within the local area, such as the starting point of a construction project or the centroid of a surveyed region.
 
-- Local Vertical Coordinate System: 
-
-
-
-- North-East-Down (NED) Convention and East-North-Up (ENU) Convention:
-There are two main ways to display our coordinate systems mainly NED or ENU convention. This is especially important when working with different frames of references such as aircrafts, sea vehicles and land vehicles. Different scenarios will utilise different conventions depending on the platforms requirements and how the user wishes to use and display the information. 
-
-  Coordinates to describe an aircraft attitude (Heading, Elevation and Bank) are       normally given relative to a reference control frame located in a control tower, and therefore ENU, relative to the position of the control tower on the earth surface.
-
-  Coordinates to describe observations made from an aircraft are normally given relative to its intrinsic axes, but normally using as positive the coordinate pointing downwards, where the interesting points are located. Therefore, they are normally NED.
+Local coordinate systems are widely used in engineering, construction, urban planning, GIS (Geographic Information Systems), and other fields where precise local positioning and spatial referencing are required. They provide a convenient and practical way to express locations, distances, and orientations within a localized context, facilitating design, analysis, and decision-making processes.
 
 
-## Geodetic Coordinate System to Geocentric Coordinate System
-For the Geodetic Coordinate System, 
-- Geodetic Latitude: Measured in the plane of the local meridian from the Earth's true Equator to the geodetic local vertical, measured positive north from the Equator.
-- Geodetic Longitude: Measured in the plane of the Earth's true Equator from the Greenwich meridian to the local meridian, measured positive eastward.
-- Geodetic Altitude: The distance from the selected point to the reference geoid, measured along the geodetic local vertical, and is positive for points outside the geoid.
+## North-East-Down (NED) Convention:
+The NED (North-East-Down) coordinate system is a local, Cartesian coordinate system commonly used in aviation, robotics, and other fields where a local frame of reference is needed. In the NED system, three orthogonal axes are defined:
 
-For the Geocentric Coordinate System, it uses a cartesian coordinate system hence it would be more intuitive for others to understand especially for those who are familiar with matrices. Hence, there are reasons as to why individuals would prefer to work in the Geocentric Coordinate System as compared to Geodetic. 
+North (N): Points in the direction of increasing latitude.
+East (E): Points in the direction of increasing longitude.
+Down (D): Points opposite to the direction of gravity.
+The origin of the NED coordinate system is typically set at a specific point of interest, such as an aircraft's starting position or a robotic vehicle's initial location.
 
-## Geocentric Coordinate System to Local Vertical Coordinate System (ENU Convention)
+This system provides a convenient way to express positions and orientations relative to a local reference point, making it useful for navigation, control, and localization tasks. By using NED coordinates, movements and orientations can be described in a simple and intuitive manner, facilitating various engineering applications.
 
+## East-North-Up (ENU) Convention:
+The ENU (East-North-Up) coordinate system is a local, Cartesian coordinate system commonly used in navigation, geodesy, and robotics. In the ENU system, three orthogonal axes are defined:
 
-## Geocentric Coordinate System to Local Vertical Coordinate System (NED Convention)
+East (E): Points in the direction of increasing longitude.
+North (N): Points in the direction of increasing latitude.
+Up (U): Points in the direction of increasing altitude or elevation.
+The origin of the ENU coordinate system is typically set at a specific point of interest, such as a reference point or the starting location of a vehicle.
+
+This system provides a convenient way to express positions and orientations relative to a local reference point, making it useful for navigation, mapping, and control tasks. By using ENU coordinates, movements and orientations can be described in a straightforward and intuitive manner, facilitating various engineering and scientific applications.
 
 
 ## Acknowledgment, Credits and Suggested Readings
