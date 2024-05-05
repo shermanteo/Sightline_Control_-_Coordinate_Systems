@@ -12,5 +12,5 @@ def ECEF_2_NED(Latitude, Longitude, Altitude):
   Matrix_NED_2 = np. matrix ([[ cos(Longitude), sin(Longitude), 0],
                             [ -sin(Longitude), cos(Longitude), 0],
                             [ 0, 0, 1]])
-NED_Rotation_Matrix = Matrix_NED_1 * Matrix_NED_2
+  NED_Rotation_Matrix = Matrix_NED_1 * Matrix_NED_2
 
