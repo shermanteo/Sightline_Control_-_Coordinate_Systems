@@ -1,7 +1,7 @@
 # Coordinate_Systems
 
 ## Project Overview
-There are several coordinate systems that are being used around the world which may confuse us at times. These coodrinate systems may be trivial to some however for others, it proves to be of utmost importance especially when it involves interpreting one coordinate system and how it applies to the other. For example, there are maps which give the Latitude, Longitude and Altitude however, it is not as intuitive when we need to calculate much smaller differences in displacements hence preferring to use X, Y and Z instead. There are a variety of different coordinate systems and each has their benefits and detriments however, this project will cover just the transformation of between coordinate systems. 
+There are several coordinate systems that are being used around the world which may confuse us at times. These coodrinate systems may be trivial to some however for others, it proves to be of utmost importance especially when it involves interpreting one coordinate system and how it applies to the other. For example, there are maps which give the Latitude, Longitude and Altitude however, it is not as intuitive when we need to calculate much smaller differences in displacements hence preferring to use X, Y and Z instead. There are a variety of different coordinate systems and each has their benefits and detriments however, this project will cover just the transformation of between coordinate systems and subsequently using all these knowledge to create a code for sightline control. 
 
 All constants used are in accordance to WGS84.
 
