@@ -12,12 +12,13 @@ def ECEF_2_LLA (X, Y, Z):
   s = sqrt(X**2 + Y**2)
 
   
-  longitude = atan2(Y, X)
-  initial_guess_reduced_latitude = atan2(Z, (1-f)*s)
-  initial_guess_latitude = atan2(Z+((e2*(1-f))/(1-e2))*a*(sin(initial_guess_reduced_latitude))**3, s-e2*a*(cos(initial_guess_reduced_latitudee))**3)
+  longitude = atan(Y/X)
+  
+  initial_guess_reduced_latitude = atan((Z) / ((1-f)*s))
+  initial_guess_latitude = atan((Z+((e2*(1-f))/(1-e2))*a*(sin(initial_guess_reduced_latitude))**3) / (s-e2*a*(cos(initial_guess_reduced_latitudee))**3))
 
-  reduced_latitude = atan2((1-f)*sin(initial_guess_latitude), cos(initial_guess_latitude))
-  latitude = atan2(Z+((e2*(1-f))/(1-e2))*a*(sin(reduced_latitude))**3, s-e2*a*(cos(reduced_latitudee))**3)
+  reduced_latitude = atan(((1-f)*sin(initial_guess_latitude)) / (cos(initial_guess_latitude)))
+  latitude = atan((Z+((e2*(1-f))/(1-e2))*a*(sin(reduced_latitude))**3) / (s-e2*a*(cos(reduced_latitudee))**3))
   
   N = (a/sqrt(1-e2*(sin(latitude))**2))
   altitude = s*cos(latitude) + (Z+e2*N*sin(latitude))*sin(latitude) - N
