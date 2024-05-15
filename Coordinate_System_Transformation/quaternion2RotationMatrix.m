@@ -1,4 +1,4 @@
-function R =  quaternion2RotationMatrix (q0, q1, q2, q3);
+function R =  quaternion2RotationMatrix (q0, q1, q2, q3)
 % Description: Converting the quaternions to a rotation matrix
 % A quaternion is represented by four elements: q0+iq1+jq2+kq3, where q0, 
 % q1, q2 and q3 are real numbers, and i, j and k are mutually orthogonal 
