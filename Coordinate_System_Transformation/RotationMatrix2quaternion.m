@@ -26,3 +26,28 @@ q0 = sqrt((1+R(1,1)+R(2,2)+R(3,3))/4);
 q1 = sqrt((1+R(1,1)-R(2,2)-R(3,3))/4);
 q2 = sqrt((1-R(1,1)+R(2,2)-R(3,3))/4);
 q3 = sqrt((1-R(1,1)-R(2,2)+R(3,3))/4);
+
+% Step 2: To resolve the signs, find the largest of q0, q1, q2, q3 and 
+% assume its sign is positive. Then compute the remaining components as 
+% shown in the table below. Taking the largest magnitude avoids division by
+% small numbers, which would reduce numerical accuracy.
+if q0 > q1 && q0 > q2 && q0 > q3
+    q0 = q0;
+    q1 = (R(3,2)-R(2,3))/(4*q0);
+    q2 = (R(1,3)-R(3,1))/(4*q0);
+    q3 = (R(2,1)-R(1,2))/(4*q0);
+elseif q1 > q0 && q1 > q2 && q1 > q3
+    q1 = q1
+    q0 = (R(3,2)-R(2,3))/(4*q1);
+    q2 = (R(1,2)+R(2,1))/(4*q1);
+    q3 = (R(1,3)+R(3,1))/(4*q1);
+elseif q2 > q0 && q2 > q1 && q2 > q3
+    q2 = q2;
+    q0 = (R(1,3)-R(3,1))/(4*q2);
+    q1 = (R(1,2)+R(2,1))/(4*q2);
+    q3 = (R(2,3)+R(3,2))/(4*q2);
+elseif q3 > q0 && q3 > q1 && q3 > q2
+    q3 = q0;
+    q0 = (R(2,1)-R(1,2))/(4*q3);
+    q1 = (R(1,3)+R(3,1))/(4*q3);
+    q2 = (R(2,3)+R(3,2))/(4*q3);
