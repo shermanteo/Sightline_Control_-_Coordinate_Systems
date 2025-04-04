@@ -33,7 +33,7 @@ In this system, three coordinates are used to describe a point: geocentric latit
 The geocentric coordinate system is commonly used in astronomy, satellite tracking, and geodesy, where precise positioning relative to the Earth's center is required. It provides a consistent reference frame for global measurements and calculations, essential for activities such as satellite orbit determination, Earth rotation studies, and geophysical modeling.
 
 
-## Local Coordinate System: 
+## Local Vertical Coordinate System: 
 The local coordinate system is a Cartesian coordinate system established within a defined local area, providing a frame of reference relative to a specific point or object of interest. Unlike global coordinate systems such as geodetic or geocentric systems, which cover the entire Earth, the local coordinate system is localized and typically used for smaller areas or projects.
 
 The local coordinate system typically has three orthogonal axes, often denoted as:
